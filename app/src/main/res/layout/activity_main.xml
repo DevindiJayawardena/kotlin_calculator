@@ -14,7 +14,10 @@
         android:background="@color/textViewBackgroundColor"
         android:textColor="@color/buttonsTextColor"
         android:textSize="48sp"
-        android:maxLength="12" />
+        android:maxLength="16"
+        android:padding="10dp"
+        android:text="0"
+        android:gravity="right|bottom|center_vertical"/>
 
     <!--ROW 1-->
     <LinearLayout
@@ -62,7 +65,7 @@
             android:layout_margin="4dp"
             android:text="/"
             android:textSize="20sp"
-            android:onClick="onDigit" />
+            android:onClick="onOperator" />
 
     </LinearLayout>
 
@@ -112,7 +115,7 @@
             android:layout_margin="4dp"
             android:text="*"
             android:textSize="20sp"
-            android:onClick="onDigit" />
+            android:onClick="onOperator" />
 
     </LinearLayout>
 
@@ -162,7 +165,7 @@
             android:layout_margin="4dp"
             android:text="-"
             android:textSize="20sp"
-            android:onClick="onDigit" />
+            android:onClick="onOperator" />
 
     </LinearLayout>
 
@@ -182,7 +185,7 @@
             android:layout_margin="4dp"
             android:text="."
             android:textSize="20sp"
-            android:onClick="onDigit" />
+            android:onClick="onDecimalPoint" />
 
         <Button
             android:id="@+id/btnZero"
@@ -202,7 +205,7 @@
             android:layout_margin="4dp"
             android:text="CLR"
             android:textSize="15sp"
-            android:onClick="onDigit" />
+            android:onClick="onClear" />
 
         <Button
             android:id="@+id/btnAdd"
@@ -212,7 +215,7 @@
             android:layout_margin="4dp"
             android:text="+"
             android:textSize="20sp"
-            android:onClick="onDigit" />
+            android:onClick="onOperator" />
 
     </LinearLayout>
 
@@ -231,8 +234,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="="
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:onClick="onEqual" />
 
     </LinearLayout>
 
 </LinearLayout>
+
+
